@@ -18,3 +18,6 @@ jobs:
 
       - name: Verify README
         run: test -f README.md
+      
+      - name: Run Custom Vowel Analyzer
+        uses: ./vowel-analyzer
