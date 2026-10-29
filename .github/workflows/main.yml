@@ -1,0 +1,20 @@
+name: UTS Software Development Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run test
+        run: echo "GitHub Actions workflow completed successfully!"
+
+      - name: Verify README
+        run: test -f README.md
