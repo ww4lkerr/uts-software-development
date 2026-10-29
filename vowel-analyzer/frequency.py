@@ -1,6 +1,7 @@
 from pathlib import Path
 
-text = Path("data.txt").read_text(encoding="utf-8").lower()
+folder = Path(__file__).resolve().parent
+text = (folder / "data.txt").read_text(encoding="utf-8").lower()
 
 vowels = "aeiou"
 counts = {vowel: text.count(vowel) for vowel in vowels}
